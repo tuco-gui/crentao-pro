@@ -1,13 +1,31 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz Bíblico</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: #eee; background:#222; text-align:center; padding:40px; }
+      #quiz { max-width: 680px; margin: 0 auto; background:#111; padding:24px; border-radius:12px; box-shadow: 0 8px 30px rgba(0,0,0,.35); }
+      h1 { margin-top:0; }
+      button { margin:6px; padding:10px 16px; border:0; border-radius:8px; cursor:pointer; background:#6e39d6; color:#fff; font-weight:600; }
+      button:hover { background:#5a2ec0; }
+      .correta { background: #2e7d32 !important; }
+      .errada  { background: #c62828 !important; }
+      #resultado { margin-top: 10px; min-height: 24px; }
+    </style>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <h1>Quiz Bíblico</h1>
+    <div id="quiz">
+      <p id="pergunta">Carregando pergunta...</p>
+      <div id="alternativas"></div>
+      <p id="resultado"></p>
+    </div>
+
+    <!-- carrega o script do quiz -->
+    <script type="module" src="/src/perguntas.js"></script>
   </body>
 </html>
+
+
